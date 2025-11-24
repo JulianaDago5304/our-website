@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Our Website</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: url("BACKGROUND.jpg") no-repeat center center fixed;
+      background-size: cover;
+      color: #fff;
+    }
+    .overlay {
+      background: rgba(0, 0, 0, 0.6); /* dark overlay for readability */
+      min-height: 100vh;
+      padding: 40px;
+    }
+    .container {
+      max-width: 800px;
+      margin: auto;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.5);
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 10px;
+    }
+    h2 {
+      color: #00e6ac;
+      border-bottom: 2px solid #00e6ac;
+      padding-bottom: 5px;
+    }
+    .info {
+      margin: 15px 0;
+    }
+    .label {
+      font-weight: bold;
+      color: #ffd700;
+    }
+    ul {
+      padding-left: 20px;
+    }
+    footer {
+      text-align: center;
+      margin-top: 30px;
+      font-size: 0.9em;
+      color: #ccc;
+    }
+    /* Button styles */
+    .toggle-btn {
+      background-color: #00e6ac;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      margin: 10px 5px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1em;
+      transition: background-color 0.3s;
+    }
+    .toggle-btn:hover {
+      background-color: #00b894;
+    }
+    /* Hidden sections by default */
+    .section {
+      display: none;
+    }
+    /* Profile styles */
+    .profile {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .profile img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      border: 3px solid #00e6ac;
+      margin-bottom: 10px;
+    }
+    /* Gallery styles */
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+    }
+    .gallery img {
+      width: 200px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 8px;
+      border: 2px solid #00e6ac;
+      transition: transform 0.3s;
+    }
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+  <div class="overlay">
+    <div class="container">
+      <h1>ISPRIKITIKSHING</h1>
+      <p style="text-align:center;">TAGA BARUSBUS </p>
+
+      <!-- Toggle buttons -->
+      <div style="text-align: center; margin: 20px 0;">
+        <button class="toggle-btn" onclick="toggleSection('about')">About Us</button>
+        <button class="toggle-btn" onclick="toggleSection('hobbies')">Hobbies</button>
+        <button class="toggle-btn" onclick="toggleSection('pictures')">Pictures</button>
+      </div>
+
+      <!-- About Us section -->
+      <div id="about" class="section">
+        <h2>About Us</h2>
+        <div class="profile">
+          <img src="profile.jpg" alt="ISPRIKITIKSHING Profile Picture" />
+          <p><strong>ISPRIKITIKSHING</strong></p>
+        </div>
+        <p>Hello! We are the ISPRIKITIKSHINGSHING, and we absolutely love to hang out everywhere! From the bustling streets to quiet nature, there’s no place we won’t explore together. We thrive on laughter, stories, and endless adventures, always finding joy in each other’s company. Time spent apart feels dull and empty, but when we’re together, every moment sparkles with energy and excitement. We love sharing secrets, chasing new experiences, and creating memories that will last a lifetime. No matter the weather or the place, we stick together, making even the simplest moments extraordinary. We are more than a group—we are a whirlwind of friendship, fun, and unstoppable togetherness, and wherever we go, we leave a trail of laughter behind us!</p>
+
+      <!-- Hobbies section -->
+      <div id="hobbies" class="section">
+        <h2>Hobbies</h2>
+        <ul>
+          <li>Loves photography and capturing candid moments.</li>
+          <li>Loves and outdoor adventures. Always knows the best trails and scenic spots for a picnic.</li>
+          <li>Watching movies or anime</li>
+          <li>Loves making even a simple walk to the store feel like an action movie.</li>
+        </ul>
+      </div>
+
+      <!-- Pictures section -->
+      <div id="pictures" class="section">
+        <h2>Pictures</h2>
+        <p>Here are some pictures from my life and interests:</p>
+        <div class="gallery">
+          <img src="astig.jpg" alt="Picture 1" />
+          <img src="talisay.jpg" alt="Picture 2" />
+          <img src="kaon.jpg" alt="Picture 3" />
+          <img src="akwe.jpg" alt="Picture 4" />
+          <img src="akwe1.jpg" alt="Picture 5" />
+          <img src="akweduman.jpg" alt="Picture 6" />
+          <img src="talisay3.jpg" alt="Picture 7" />
+          <img src="milkt.jpg" alt="Picture 8" />
+      </div>
+
+      <footer>
+        &copy; 2025 Juliana Dago. All rights reserved.
+      </footer>
+    </div>
+  </div>
+
+  <script>
+    function toggleSection(sectionId) {
+      const section = document.getElementById(sectionId);
+      if (section.style.display === "none" || section.style.display === "") {
+        section.style.display = "block";
+      } else {
+        section.style.display = "none";
+      }
+    }
+  </script>
+</body>
+</html>
